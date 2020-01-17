@@ -24,16 +24,16 @@ class ReadFile(ModuleInterface):
 
 
     def read_all_lines(self):
-        self.lines = [line.rstrip() for line in self.file_desc]
+        self.lines = list((line.rstrip() for line in self.file_desc))
         return self.lines
 
 
     def read_first_two_lines(self):
-        return [line.rstrip() for line in self.file_desc][:2]
+        return list((line.rstrip() for line in self.file_desc))[:2]
 
 
     def read_last_two_lines(self):
-        return [line.rstrip() for line in self.file_desc][-2:]
+        return list((line.rstrip() for line in self.file_desc))[-2:]
 
 
 
