@@ -6,7 +6,7 @@ class ModuleInterface(ABC):
         pass
 
     @abstractmethod
-    def read_first_two_lines(self, num_of_lines=2):
+    def read_first_two_lines(self):
         pass
 
     @abstractmethod
