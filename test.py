@@ -6,7 +6,10 @@ from spreadsheets.csv import CSVSpread
 from spreadsheets.tsv import TSVSpread
 
 
-class TestClass(unittest.TestCase):    
+class TestClass(unittest.TestCase):
+    def setUp(self):
+        return super().setUp()
+
     def test_OpenTextFile(self):
         text_file = TextFile('numbers.txt')
         self.assertListEqual(text_file.read_first_two_lines(), ['1', '3'])
